@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: com.google.gson.functional.CollectionTest
+-------------------------------------------------------------------------------
+Tests run: 29, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.198 s <<< FAILURE! -- in com.google.gson.functional.CollectionTest
+com.google.gson.functional.CollectionTest.testWildcardCollectionField -- Time elapsed: 0.094 s <<< FAILURE!
+value of           : toJson(...)
+expected to contain: {"longValue":3,"intValue":1,"booleanValue":true,"stringValue":"blah"}
+but was            : {"collection":[{"stringValue":"blah","longValue":3,"intValue":1,"booleanValue":true},{"stringValue":"blahB","longValue":2,"intValue":6,"booleanValue":false}]}
+	at com.google.gson.functional.CollectionTest.testWildcardCollectionField(CollectionTest.java:329)
+
+com.google.gson.functional.CollectionTest.testObjectCollectionSerialization -- Time elapsed: 0.002 s <<< FAILURE!
+value of           : toJson(...)
+expected to contain: {"longValue":0,"intValue":0,"booleanValue":false,"stringValue":""}
+but was            : [{"longValue":0,"booleanValue":false,"intValue":0,"stringValue":""},{"longValue":0,"booleanValue":false,"intValue":0,"stringValue":""},"test"]
+	at com.google.gson.functional.CollectionTest.testObjectCollectionSerialization(CollectionTest.java:267)
+
+com.google.gson.functional.CollectionTest.testPriorityQueue -- Time elapsed: 0.033 s <<< FAILURE!
+value of: toJson(...)
+expected: [10,20,22]
+but was : [20,10,22]
+	at com.google.gson.functional.CollectionTest.testPriorityQueue(CollectionTest.java:147)
+
+com.google.gson.functional.CollectionTest.testCollectionOfBagOfPrimitivesSerialization -- Time elapsed: 0.006 s <<< FAILURE!
+expected to contain: {"longValue":3,"intValue":1,"booleanValue":true,"stringValue":"blah"}
+but was            : [{"booleanValue":true,"stringValue":"blah","intValue":1,"longValue":3},{"booleanValue":false,"stringValue":"blahB","intValue":6,"longValue":2}]
+	at com.google.gson.functional.CollectionTest.testCollectionOfBagOfPrimitivesSerialization(CollectionTest.java:243)
+

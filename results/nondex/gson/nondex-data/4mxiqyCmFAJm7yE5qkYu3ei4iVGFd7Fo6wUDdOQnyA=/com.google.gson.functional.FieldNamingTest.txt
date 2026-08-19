@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: com.google.gson.functional.FieldNamingTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 0.021 s <<< FAILURE! -- in com.google.gson.functional.FieldNamingTest
+com.google.gson.functional.FieldNamingTest.testUpperCamelCase -- Time elapsed: 0.004 s <<< FAILURE!
+value of: replace(...)
+expected: {'LowerCamel':1,'UpperCamel':2,'_LowerCamelLeadingUnderscore':3,'_UpperCamelLeadingUnderscore':4,'Lower_words':5,'UPPER_WORDS':6,'annotatedName':7,'LowerId':8,'_9':9}
+but was : {'_UpperCamelLeadingUnderscore':4,'Lower_words':5,'UpperCamel':2,'_LowerCamelLeadingUnderscore':3,'UPPER_WORDS':6,'LowerCamel':1,'LowerId':8,'annotatedName':7,'_9':9}
+	at com.google.gson.functional.FieldNamingTest.testUpperCamelCase(FieldNamingTest.java:47)
+
+com.google.gson.functional.FieldNamingTest.testLowerCaseWithDashes -- Time elapsed: 0.006 s <<< FAILURE!
+value of: replace(...)
+expected: {'lower-camel':1,'upper-camel':2,'_lower-camel-leading-underscore':3,'_-upper-camel-leading-underscore':4,'lower_words':5,'u-p-p-e-r_-w-o-r-d-s':6,'annotatedName':7,'lower-id':8,'_9':9}
+but was : {'u-p-p-e-r_-w-o-r-d-s':6,'lower-camel':1,'lower-id':8,'_9':9,'_lower-camel-leading-underscore':3,'annotatedName':7,'upper-camel':2,'lower_words':5,'_-upper-camel-leading-underscore':4}
+	at com.google.gson.functional.FieldNamingTest.testLowerCaseWithDashes(FieldNamingTest.java:83)
+
+com.google.gson.functional.FieldNamingTest.testLowerCaseWithUnderscores -- Time elapsed: 0.003 s <<< FAILURE!
+value of: replace(...)
+expected: {'lower_camel':1,'upper_camel':2,'_lower_camel_leading_underscore':3,'__upper_camel_leading_underscore':4,'lower_words':5,'u_p_p_e_r__w_o_r_d_s':6,'annotatedName':7,'lower_id':8,'_9':9}
+but was : {'__upper_camel_leading_underscore':4,'_lower_camel_leading_underscore':3,'annotatedName':7,'lower_id':8,'lower_words':5,'u_p_p_e_r__w_o_r_d_s':6,'_9':9,'lower_camel':1,'upper_camel':2}
+	at com.google.gson.functional.FieldNamingTest.testLowerCaseWithUnderscores(FieldNamingTest.java:74)
+
+com.google.gson.functional.FieldNamingTest.testUpperCamelCaseWithSpaces -- Time elapsed: 0.002 s <<< FAILURE!
+value of: replace(...)
+expected: {'Lower Camel':1,'Upper Camel':2,'_Lower Camel Leading Underscore':3,'_ Upper Camel Leading Underscore':4,'Lower_words':5,'U P P E R_ W O R D S':6,'annotatedName':7,'Lower Id':8,'_9':9}
+but was : {'Lower_words':5,'Upper Camel':2,'_9':9,'_Lower Camel Leading Underscore':3,'_ Upper Camel Leading Underscore':4,'Lower Id':8,'U P P E R_ W O R D S':6,'Lower Camel':1,'annotatedName':7}
+	at com.google.gson.functional.FieldNamingTest.testUpperCamelCaseWithSpaces(FieldNamingTest.java:56)
+
+com.google.gson.functional.FieldNamingTest.testIdentity -- Time elapsed: 0.002 s <<< FAILURE!
+value of: replace(...)
+expected: {'lowerCamel':1,'UpperCamel':2,'_lowerCamelLeadingUnderscore':3,'_UpperCamelLeadingUnderscore':4,'lower_words':5,'UPPER_WORDS':6,'annotatedName':7,'lowerId':8,'_9':9}
+but was : {'UpperCamel':2,'annotatedName':7,'UPPER_WORDS':6,'_lowerCamelLeadingUnderscore':3,'lowerId':8,'lower_words':5,'_UpperCamelLeadingUnderscore':4,'_9':9,'lowerCamel':1}
+	at com.google.gson.functional.FieldNamingTest.testIdentity(FieldNamingTest.java:38)
+
+com.google.gson.functional.FieldNamingTest.testUpperCaseWithUnderscores -- Time elapsed: 0.002 s <<< FAILURE!
+value of: replace(...)
+expected: {'LOWER_CAMEL':1,'UPPER_CAMEL':2,'_LOWER_CAMEL_LEADING_UNDERSCORE':3,'__UPPER_CAMEL_LEADING_UNDERSCORE':4,'LOWER_WORDS':5,'U_P_P_E_R__W_O_R_D_S':6,'annotatedName':7,'LOWER_ID':8,'_9':9}
+but was : {'U_P_P_E_R__W_O_R_D_S':6,'_LOWER_CAMEL_LEADING_UNDERSCORE':3,'LOWER_ID':8,'LOWER_WORDS':5,'__UPPER_CAMEL_LEADING_UNDERSCORE':4,'UPPER_CAMEL':2,'annotatedName':7,'LOWER_CAMEL':1,'_9':9}
+	at com.google.gson.functional.FieldNamingTest.testUpperCaseWithUnderscores(FieldNamingTest.java:65)
+

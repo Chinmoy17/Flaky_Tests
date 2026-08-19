@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.google.gson.functional.CollectionTest" time="0.224" tests="29" errors="0" skipped="0" failures="4">
+  <properties>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="nondexStart" value="0"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/work/gson/gson/target/test-classes:/work/gson/gson/target/classes:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/root/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/com/google/truth/truth/1.1.5/truth-1.1.5.jar:/root/.m2/repository/com/google/guava/guava/32.0.1-android/guava-32.0.1-android.jar:/root/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/root/.m2/repository/org/checkerframework/checker-qual/3.35.0/checker-qual-3.35.0.jar:/root/.m2/repository/com/google/auto/value/auto-value-annotations/1.10.1/auto-value-annotations-1.10.1.jar:/root/.m2/repository/org/ow2/asm/asm/9.5/asm-9.5.jar:/root/.m2/repository/com/google/guava/guava-testlib/32.1.3-jre/guava-testlib-32.1.3-jre.jar:/root/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/root/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="nondexPrintstack" value="false"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Linux"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/opt/java/openjdk/lib"/>
+    <property name="nondexLogging" value="CONFIG"/>
+    <property name="sun.java.command" value="/work/gson/gson/target/surefire/surefirebooter-20260819084901920_9.jar /work/gson/gson/target/surefire 2026-08-19T08-49-00_991-jvmRun1 surefire-20260819084901920_7tmp surefire_2-20260819084901920_8tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="MapTest,FieldNamingTest,CollectionTest"/>
+    <property name="surefire.test.class.path" value="/work/gson/gson/target/test-classes:/work/gson/gson/target/classes:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/root/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/com/google/truth/truth/1.1.5/truth-1.1.5.jar:/root/.m2/repository/com/google/guava/guava/32.0.1-android/guava-32.0.1-android.jar:/root/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/root/.m2/repository/org/checkerframework/checker-qual/3.35.0/checker-qual-3.35.0.jar:/root/.m2/repository/com/google/auto/value/auto-value-annotations/1.10.1/auto-value-annotations-1.10.1.jar:/root/.m2/repository/org/ow2/asm/asm/9.5/asm-9.5.jar:/root/.m2/repository/com/google/guava/guava-testlib/32.1.3-jre/guava-testlib-32.1.3-jre.jar:/root/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/root/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="nondexExecid" value="4mxiqyCmFAJm7yE5qkYu3ei4iVGFd7Fo6wUDdOQnyA="/>
+    <property name="user.home" value="/root"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-04-21"/>
+    <property name="java.home" value="/opt/java/openjdk"/>
+    <property name="basedir" value="/work/gson/gson"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="nondexEnd" value="9223372036854775807"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="nondexFilter" value=".*"/>
+    <property name="nondexSeed" value="974622"/>
+    <property name="surefire.real.class.path" value="/work/gson/gson/target/surefire/surefirebooter-20260819084901920_9.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.31+11"/>
+    <property name="user.name" value="root"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.6.87.2-microsoft-standard-WSL2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-11.0.31+11"/>
+    <property name="localRepository" value="/root/.m2/repository"/>
+    <property name="nondexDir" value="/work/gson/gson/.nondex"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="nondexJarDir" value="/work/gson/gson/.nondex"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.31"/>
+    <property name="user.dir" value="/work/gson/gson"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="nondexMode" value="FULL"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="failIfNoTests" value="false"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="11.0.31+11"/>
+    <property name="java.specification.maintenance.version" value="3"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="testWildcardCollectionField" classname="com.google.gson.functional.CollectionTest" time="0.105">
+    <failure message="value of           : toJson(...)&#10;expected to contain: {&quot;longValue&quot;:3,&quot;intValue&quot;:1,&quot;booleanValue&quot;:true,&quot;stringValue&quot;:&quot;blah&quot;}&#10;but was            : {&quot;collection&quot;:[{&quot;intValue&quot;:1,&quot;longValue&quot;:3,&quot;stringValue&quot;:&quot;blah&quot;,&quot;booleanValue&quot;:true},{&quot;intValue&quot;:6,&quot;longValue&quot;:2,&quot;stringValue&quot;:&quot;blahB&quot;,&quot;booleanValue&quot;:false}]}" type="value of           "><![CDATA[value of           : toJson(...)
+expected to contain: {"longValue":3,"intValue":1,"booleanValue":true,"stringValue":"blah"}
+but was            : {"collection":[{"intValue":1,"longValue":3,"stringValue":"blah","booleanValue":true},{"intValue":6,"longValue":2,"stringValue":"blahB","booleanValue":false}]}
+	at com.google.gson.functional.CollectionTest.testWildcardCollectionField(CollectionTest.java:329)
+]]></failure>
+  </testcase>
+  <testcase name="testCollectionOfObjectWithNullSerialization" classname="com.google.gson.functional.CollectionTest" time="0.002"/>
+  <testcase name="testFieldIsArrayList" classname="com.google.gson.functional.CollectionTest" time="0.005"/>
+  <testcase name="testRawCollectionOfIntegersSerialization" classname="com.google.gson.functional.CollectionTest" time="0.002"/>
+  <testcase name="testTopLevelCollectionOfIntegersDeserialization" classname="com.google.gson.functional.CollectionTest" time="0.002"/>
+  <testcase name="testObjectCollectionSerialization" classname="com.google.gson.functional.CollectionTest" time="0.004">
+    <failure message="value of           : toJson(...)&#10;expected to contain: {&quot;longValue&quot;:0,&quot;intValue&quot;:0,&quot;booleanValue&quot;:false,&quot;stringValue&quot;:&quot;&quot;}&#10;but was            : [{&quot;booleanValue&quot;:false,&quot;stringValue&quot;:&quot;&quot;,&quot;longValue&quot;:0,&quot;intValue&quot;:0},{&quot;booleanValue&quot;:false,&quot;stringValue&quot;:&quot;&quot;,&quot;longValue&quot;:0,&quot;intValue&quot;:0},&quot;test&quot;]" type="value of           "><![CDATA[value of           : toJson(...)
+expected to contain: {"longValue":0,"intValue":0,"booleanValue":false,"stringValue":""}
+but was            : [{"booleanValue":false,"stringValue":"","longValue":0,"intValue":0},{"booleanValue":false,"stringValue":"","longValue":0,"intValue":0},"test"]
+	at com.google.gson.functional.CollectionTest.testObjectCollectionSerialization(CollectionTest.java:267)
+]]></failure>
+  </testcase>
+  <testcase name="testCollectionOfStringsDeserialization" classname="com.google.gson.functional.CollectionTest" time="0.001"/>
+  <testcase name="testPriorityQueue" classname="com.google.gson.functional.CollectionTest" time="0.042">
+    <failure message="value of: toJson(...)&#10;expected: [10,20,22]&#10;but was : [22,20,10]" type="value of"><![CDATA[value of: toJson(...)
+expected: [10,20,22]
+but was : [22,20,10]
+	at com.google.gson.functional.CollectionTest.testPriorityQueue(CollectionTest.java:147)
+]]></failure>
+  </testcase>
+  <testcase name="testStack" classname="com.google.gson.functional.CollectionTest" time="0.002"/>
+  <testcase name="testLinkedListDeserialization" classname="com.google.gson.functional.CollectionTest" time="0.002"/>
+  <testcase name="testQueueSerialization" classname="com.google.gson.functional.CollectionTest" time="0.002"/>
+  <testcase name="testRawCollectionDeserializationNotAllowed" classname="com.google.gson.functional.CollectionTest" time="0.001"/>
+  <testcase name="testWildcardPrimitiveCollectionSerilaization" classname="com.google.gson.functional.CollectionTest" time="0.001"/>
+  <testcase name="testCollectionOfStringsSerialization" classname="com.google.gson.functional.CollectionTest" time="0.0"/>
+  <testcase name="testNullsInListSerialization" classname="com.google.gson.functional.CollectionTest" time="0.001"/>
+  <testcase name="testWildcardPrimitiveCollectionDeserilaization" classname="com.google.gson.functional.CollectionTest" time="0.001"/>
+  <testcase name="testTopLevelListOfIntegerCollectionsDeserialization" classname="com.google.gson.functional.CollectionTest" time="0.001"/>
+  <testcase name="testCollectionOfObjectSerialization" classname="com.google.gson.functional.CollectionTest" time="0.001"/>
+  <testcase name="testSetDeserialization" classname="com.google.gson.functional.CollectionTest" time="0.006"/>
+  <testcase name="testIssue1107" classname="com.google.gson.functional.CollectionTest" time="0.002"/>
+  <testcase name="testCollectionOfBagOfPrimitivesSerialization" classname="com.google.gson.functional.CollectionTest" time="0.005">
+    <failure message="expected to contain: {&quot;longValue&quot;:3,&quot;intValue&quot;:1,&quot;booleanValue&quot;:true,&quot;stringValue&quot;:&quot;blah&quot;}&#10;but was            : [{&quot;longValue&quot;:3,&quot;stringValue&quot;:&quot;blah&quot;,&quot;intValue&quot;:1,&quot;booleanValue&quot;:true},{&quot;longValue&quot;:2,&quot;stringValue&quot;:&quot;blahB&quot;,&quot;intValue&quot;:6,&quot;booleanValue&quot;:false}]" type="expected to contain"><![CDATA[expected to contain: {"longValue":3,"intValue":1,"booleanValue":true,"stringValue":"blah"}
+but was            : [{"longValue":3,"stringValue":"blah","intValue":1,"booleanValue":true},{"longValue":2,"stringValue":"blahB","intValue":6,"booleanValue":false}]
+	at com.google.gson.functional.CollectionTest.testCollectionOfBagOfPrimitivesSerialization(CollectionTest.java:243)
+]]></failure>
+  </testcase>
+  <testcase name="testLinkedListSerialization" classname="com.google.gson.functional.CollectionTest" time="0.0"/>
+  <testcase name="testNullsInListDeserialization" classname="com.google.gson.functional.CollectionTest" time="0.0"/>
+  <testcase name="testSetSerialization" classname="com.google.gson.functional.CollectionTest" time="0.001"/>
+  <testcase name="testTopLevelCollectionOfIntegersSerialization" classname="com.google.gson.functional.CollectionTest" time="0.0"/>
+  <testcase name="testRawCollectionOfBagOfPrimitivesNotAllowed" classname="com.google.gson.functional.CollectionTest" time="0.016"/>
+  <testcase name="testVector" classname="com.google.gson.functional.CollectionTest" time="0.001"/>
+  <testcase name="testUserCollectionTypeAdapter" classname="com.google.gson.functional.CollectionTest" time="0.012"/>
+  <testcase name="testQueueDeserialization" classname="com.google.gson.functional.CollectionTest" time="0.001"/>
+</testsuite>

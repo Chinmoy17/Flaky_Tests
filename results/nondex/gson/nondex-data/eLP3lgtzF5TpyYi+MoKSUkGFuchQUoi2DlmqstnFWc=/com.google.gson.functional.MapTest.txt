@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.google.gson.functional.MapTest
+-------------------------------------------------------------------------------
+Tests run: 48, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.084 s <<< FAILURE! -- in com.google.gson.functional.MapTest
+com.google.gson.functional.MapTest.testInterfaceTypeMap -- Time elapsed: 0.007 s <<< FAILURE!
+value of: toJson(...)
+expected: {"bases":{"Test":{"subName":"Sub","baseName":"Base"}},"subs":{"Test":{"subName":"Sub","baseName":"Base"}}}
+but was : {"subs":{"Test":{"subName":"Sub","baseName":"Base"}},"bases":{"Test":{"subName":"Sub","baseName":"Base"}}}
+	at com.google.gson.functional.MapTest.testInterfaceTypeMap(MapTest.java:510)
+
+com.google.gson.functional.MapTest.testInterfaceTypeMapWithSerializer -- Time elapsed: 0.004 s <<< FAILURE!
+value of: toJson(...)
+expected: {"bases":{"Test":{"baseName":"Base"}},"subs":{"Test":{"subName":"Sub","baseName":"Base"}}}
+but was : {"subs":{"Test":{"subName":"Sub","baseName":"Base"}},"bases":{"Test":{"baseName":"Base"}}}
+	at com.google.gson.functional.MapTest.testInterfaceTypeMapWithSerializer(MapTest.java:543)
+

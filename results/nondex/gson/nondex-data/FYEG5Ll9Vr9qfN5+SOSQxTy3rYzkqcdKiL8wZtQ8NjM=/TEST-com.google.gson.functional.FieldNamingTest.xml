@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.google.gson.functional.FieldNamingTest" time="0.021" tests="6" errors="0" skipped="0" failures="6">
+  <properties>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="nondexStart" value="0"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/work/gson/gson/target/test-classes:/work/gson/gson/target/classes:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/root/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/com/google/truth/truth/1.1.5/truth-1.1.5.jar:/root/.m2/repository/com/google/guava/guava/32.0.1-android/guava-32.0.1-android.jar:/root/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/root/.m2/repository/org/checkerframework/checker-qual/3.35.0/checker-qual-3.35.0.jar:/root/.m2/repository/com/google/auto/value/auto-value-annotations/1.10.1/auto-value-annotations-1.10.1.jar:/root/.m2/repository/org/ow2/asm/asm/9.5/asm-9.5.jar:/root/.m2/repository/com/google/guava/guava-testlib/32.1.3-jre/guava-testlib-32.1.3-jre.jar:/root/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/root/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="nondexPrintstack" value="false"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value=""/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/opt/java/openjdk/lib"/>
+    <property name="sun.java.command" value="/work/gson/gson/target/surefire/surefirebooter-20260819084901920_12.jar /work/gson/gson/target/surefire 2026-08-19T08-49-00_991-jvmRun1 surefire-20260819084901920_10tmp surefire_3-20260819084901920_11tmp"/>
+    <property name="nondexLogging" value="CONFIG"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="MapTest,FieldNamingTest,CollectionTest"/>
+    <property name="surefire.test.class.path" value="/work/gson/gson/target/test-classes:/work/gson/gson/target/classes:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/root/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/com/google/truth/truth/1.1.5/truth-1.1.5.jar:/root/.m2/repository/com/google/guava/guava/32.0.1-android/guava-32.0.1-android.jar:/root/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/root/.m2/repository/org/checkerframework/checker-qual/3.35.0/checker-qual-3.35.0.jar:/root/.m2/repository/com/google/auto/value/auto-value-annotations/1.10.1/auto-value-annotations-1.10.1.jar:/root/.m2/repository/org/ow2/asm/asm/9.5/asm-9.5.jar:/root/.m2/repository/com/google/guava/guava-testlib/32.1.3-jre/guava-testlib-32.1.3-jre.jar:/root/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/root/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:"/>
+    <property name="nondexExecid" value="FYEG5Ll9Vr9qfN5+SOSQxTy3rYzkqcdKiL8wZtQ8NjM="/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/root"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-04-21"/>
+    <property name="java.home" value="/opt/java/openjdk"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/work/gson/gson"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="nondexEnd" value="9223372036854775807"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="nondexFilter" value=".*"/>
+    <property name="nondexSeed" value="1016066"/>
+    <property name="surefire.real.class.path" value="/work/gson/gson/target/surefire/surefirebooter-20260819084901920_12.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.31+11"/>
+    <property name="user.name" value="root"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.6.87.2-microsoft-standard-WSL2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-11.0.31+11"/>
+    <property name="localRepository" value="/root/.m2/repository"/>
+    <property name="nondexDir" value="/work/gson/gson/.nondex"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="nondexJarDir" value="/work/gson/gson/.nondex"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.31"/>
+    <property name="user.dir" value="/work/gson/gson"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="nondexMode" value="FULL"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="failIfNoTests" value="false"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.31+11"/>
+    <property name="java.specification.maintenance.version" value="3"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="testUpperCamelCase" classname="com.google.gson.functional.FieldNamingTest" time="0.004">
+    <failure message="value of: replace(...)&#10;expected: {&apos;LowerCamel&apos;:1,&apos;UpperCamel&apos;:2,&apos;_LowerCamelLeadingUnderscore&apos;:3,&apos;_UpperCamelLeadingUnderscore&apos;:4,&apos;Lower_words&apos;:5,&apos;UPPER_WORDS&apos;:6,&apos;annotatedName&apos;:7,&apos;LowerId&apos;:8,&apos;_9&apos;:9}&#10;but was : {&apos;annotatedName&apos;:7,&apos;UPPER_WORDS&apos;:6,&apos;Lower_words&apos;:5,&apos;LowerCamel&apos;:1,&apos;_LowerCamelLeadingUnderscore&apos;:3,&apos;_9&apos;:9,&apos;LowerId&apos;:8,&apos;_UpperCamelLeadingUnderscore&apos;:4,&apos;UpperCamel&apos;:2}" type="value of"><![CDATA[value of: replace(...)
+expected: {'LowerCamel':1,'UpperCamel':2,'_LowerCamelLeadingUnderscore':3,'_UpperCamelLeadingUnderscore':4,'Lower_words':5,'UPPER_WORDS':6,'annotatedName':7,'LowerId':8,'_9':9}
+but was : {'annotatedName':7,'UPPER_WORDS':6,'Lower_words':5,'LowerCamel':1,'_LowerCamelLeadingUnderscore':3,'_9':9,'LowerId':8,'_UpperCamelLeadingUnderscore':4,'UpperCamel':2}
+	at com.google.gson.functional.FieldNamingTest.testUpperCamelCase(FieldNamingTest.java:47)
+]]></failure>
+  </testcase>
+  <testcase name="testLowerCaseWithDashes" classname="com.google.gson.functional.FieldNamingTest" time="0.003">
+    <failure message="value of: replace(...)&#10;expected: {&apos;lower-camel&apos;:1,&apos;upper-camel&apos;:2,&apos;_lower-camel-leading-underscore&apos;:3,&apos;_-upper-camel-leading-underscore&apos;:4,&apos;lower_words&apos;:5,&apos;u-p-p-e-r_-w-o-r-d-s&apos;:6,&apos;annotatedName&apos;:7,&apos;lower-id&apos;:8,&apos;_9&apos;:9}&#10;but was : {&apos;lower-id&apos;:8,&apos;_9&apos;:9,&apos;_-upper-camel-leading-underscore&apos;:4,&apos;upper-camel&apos;:2,&apos;annotatedName&apos;:7,&apos;u-p-p-e-r_-w-o-r-d-s&apos;:6,&apos;_lower-camel-leading-underscore&apos;:3,&apos;lower_words&apos;:5,&apos;lower-camel&apos;:1}" type="value of"><![CDATA[value of: replace(...)
+expected: {'lower-camel':1,'upper-camel':2,'_lower-camel-leading-underscore':3,'_-upper-camel-leading-underscore':4,'lower_words':5,'u-p-p-e-r_-w-o-r-d-s':6,'annotatedName':7,'lower-id':8,'_9':9}
+but was : {'lower-id':8,'_9':9,'_-upper-camel-leading-underscore':4,'upper-camel':2,'annotatedName':7,'u-p-p-e-r_-w-o-r-d-s':6,'_lower-camel-leading-underscore':3,'lower_words':5,'lower-camel':1}
+	at com.google.gson.functional.FieldNamingTest.testLowerCaseWithDashes(FieldNamingTest.java:83)
+]]></failure>
+  </testcase>
+  <testcase name="testLowerCaseWithUnderscores" classname="com.google.gson.functional.FieldNamingTest" time="0.003">
+    <failure message="value of: replace(...)&#10;expected: {&apos;lower_camel&apos;:1,&apos;upper_camel&apos;:2,&apos;_lower_camel_leading_underscore&apos;:3,&apos;__upper_camel_leading_underscore&apos;:4,&apos;lower_words&apos;:5,&apos;u_p_p_e_r__w_o_r_d_s&apos;:6,&apos;annotatedName&apos;:7,&apos;lower_id&apos;:8,&apos;_9&apos;:9}&#10;but was : {&apos;lower_id&apos;:8,&apos;upper_camel&apos;:2,&apos;_lower_camel_leading_underscore&apos;:3,&apos;_9&apos;:9,&apos;__upper_camel_leading_underscore&apos;:4,&apos;u_p_p_e_r__w_o_r_d_s&apos;:6,&apos;lower_words&apos;:5,&apos;lower_camel&apos;:1,&apos;annotatedName&apos;:7}" type="value of"><![CDATA[value of: replace(...)
+expected: {'lower_camel':1,'upper_camel':2,'_lower_camel_leading_underscore':3,'__upper_camel_leading_underscore':4,'lower_words':5,'u_p_p_e_r__w_o_r_d_s':6,'annotatedName':7,'lower_id':8,'_9':9}
+but was : {'lower_id':8,'upper_camel':2,'_lower_camel_leading_underscore':3,'_9':9,'__upper_camel_leading_underscore':4,'u_p_p_e_r__w_o_r_d_s':6,'lower_words':5,'lower_camel':1,'annotatedName':7}
+	at com.google.gson.functional.FieldNamingTest.testLowerCaseWithUnderscores(FieldNamingTest.java:74)
+]]></failure>
+  </testcase>
+  <testcase name="testUpperCamelCaseWithSpaces" classname="com.google.gson.functional.FieldNamingTest" time="0.002">
+    <failure message="value of: replace(...)&#10;expected: {&apos;Lower Camel&apos;:1,&apos;Upper Camel&apos;:2,&apos;_Lower Camel Leading Underscore&apos;:3,&apos;_ Upper Camel Leading Underscore&apos;:4,&apos;Lower_words&apos;:5,&apos;U P P E R_ W O R D S&apos;:6,&apos;annotatedName&apos;:7,&apos;Lower Id&apos;:8,&apos;_9&apos;:9}&#10;but was : {&apos;_9&apos;:9,&apos;_Lower Camel Leading Underscore&apos;:3,&apos;_ Upper Camel Leading Underscore&apos;:4,&apos;Lower Camel&apos;:1,&apos;U P P E R_ W O R D S&apos;:6,&apos;annotatedName&apos;:7,&apos;Lower Id&apos;:8,&apos;Upper Camel&apos;:2,&apos;Lower_words&apos;:5}" type="value of"><![CDATA[value of: replace(...)
+expected: {'Lower Camel':1,'Upper Camel':2,'_Lower Camel Leading Underscore':3,'_ Upper Camel Leading Underscore':4,'Lower_words':5,'U P P E R_ W O R D S':6,'annotatedName':7,'Lower Id':8,'_9':9}
+but was : {'_9':9,'_Lower Camel Leading Underscore':3,'_ Upper Camel Leading Underscore':4,'Lower Camel':1,'U P P E R_ W O R D S':6,'annotatedName':7,'Lower Id':8,'Upper Camel':2,'Lower_words':5}
+	at com.google.gson.functional.FieldNamingTest.testUpperCamelCaseWithSpaces(FieldNamingTest.java:56)
+]]></failure>
+  </testcase>
+  <testcase name="testIdentity" classname="com.google.gson.functional.FieldNamingTest" time="0.003">
+    <failure message="value of: replace(...)&#10;expected: {&apos;lowerCamel&apos;:1,&apos;UpperCamel&apos;:2,&apos;_lowerCamelLeadingUnderscore&apos;:3,&apos;_UpperCamelLeadingUnderscore&apos;:4,&apos;lower_words&apos;:5,&apos;UPPER_WORDS&apos;:6,&apos;annotatedName&apos;:7,&apos;lowerId&apos;:8,&apos;_9&apos;:9}&#10;but was : {&apos;lowerId&apos;:8,&apos;lower_words&apos;:5,&apos;lowerCamel&apos;:1,&apos;_UpperCamelLeadingUnderscore&apos;:4,&apos;_lowerCamelLeadingUnderscore&apos;:3,&apos;UPPER_WORDS&apos;:6,&apos;annotatedName&apos;:7,&apos;UpperCamel&apos;:2,&apos;_9&apos;:9}" type="value of"><![CDATA[value of: replace(...)
+expected: {'lowerCamel':1,'UpperCamel':2,'_lowerCamelLeadingUnderscore':3,'_UpperCamelLeadingUnderscore':4,'lower_words':5,'UPPER_WORDS':6,'annotatedName':7,'lowerId':8,'_9':9}
+but was : {'lowerId':8,'lower_words':5,'lowerCamel':1,'_UpperCamelLeadingUnderscore':4,'_lowerCamelLeadingUnderscore':3,'UPPER_WORDS':6,'annotatedName':7,'UpperCamel':2,'_9':9}
+	at com.google.gson.functional.FieldNamingTest.testIdentity(FieldNamingTest.java:38)
+]]></failure>
+  </testcase>
+  <testcase name="testUpperCaseWithUnderscores" classname="com.google.gson.functional.FieldNamingTest" time="0.003">
+    <failure message="value of: replace(...)&#10;expected: {&apos;LOWER_CAMEL&apos;:1,&apos;UPPER_CAMEL&apos;:2,&apos;_LOWER_CAMEL_LEADING_UNDERSCORE&apos;:3,&apos;__UPPER_CAMEL_LEADING_UNDERSCORE&apos;:4,&apos;LOWER_WORDS&apos;:5,&apos;U_P_P_E_R__W_O_R_D_S&apos;:6,&apos;annotatedName&apos;:7,&apos;LOWER_ID&apos;:8,&apos;_9&apos;:9}&#10;but was : {&apos;U_P_P_E_R__W_O_R_D_S&apos;:6,&apos;__UPPER_CAMEL_LEADING_UNDERSCORE&apos;:4,&apos;UPPER_CAMEL&apos;:2,&apos;_LOWER_CAMEL_LEADING_UNDERSCORE&apos;:3,&apos;LOWER_ID&apos;:8,&apos;LOWER_CAMEL&apos;:1,&apos;_9&apos;:9,&apos;annotatedName&apos;:7,&apos;LOWER_WORDS&apos;:5}" type="value of"><![CDATA[value of: replace(...)
+expected: {'LOWER_CAMEL':1,'UPPER_CAMEL':2,'_LOWER_CAMEL_LEADING_UNDERSCORE':3,'__UPPER_CAMEL_LEADING_UNDERSCORE':4,'LOWER_WORDS':5,'U_P_P_E_R__W_O_R_D_S':6,'annotatedName':7,'LOWER_ID':8,'_9':9}
+but was : {'U_P_P_E_R__W_O_R_D_S':6,'__UPPER_CAMEL_LEADING_UNDERSCORE':4,'UPPER_CAMEL':2,'_LOWER_CAMEL_LEADING_UNDERSCORE':3,'LOWER_ID':8,'LOWER_CAMEL':1,'_9':9,'annotatedName':7,'LOWER_WORDS':5}
+	at com.google.gson.functional.FieldNamingTest.testUpperCaseWithUnderscores(FieldNamingTest.java:65)
+]]></failure>
+  </testcase>
+</testsuite>

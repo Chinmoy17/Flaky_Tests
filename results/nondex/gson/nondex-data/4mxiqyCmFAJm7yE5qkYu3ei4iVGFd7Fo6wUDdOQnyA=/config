@@ -1,0 +1,11 @@
+nondexFilter=.*
+nondexMode=FULL
+nondexSeed=974622
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/work/gson/gson/.nondex
+nondexJarDir=/work/gson/gson/.nondex
+nondexExecid=4mxiqyCmFAJm7yE5qkYu3ei4iVGFd7Fo6wUDdOQnyA=
+nondexLogging=CONFIG
+test=

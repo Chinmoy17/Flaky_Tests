@@ -1,0 +1,12 @@
+com.google.gson.functional.MapTest#testInterfaceTypeMap
+com.google.gson.functional.MapTest#testInterfaceTypeMapWithSerializer
+com.google.gson.functional.CollectionTest#testWildcardCollectionField
+com.google.gson.functional.CollectionTest#testObjectCollectionSerialization
+com.google.gson.functional.CollectionTest#testPriorityQueue
+com.google.gson.functional.CollectionTest#testCollectionOfBagOfPrimitivesSerialization
+com.google.gson.functional.FieldNamingTest#testUpperCamelCase
+com.google.gson.functional.FieldNamingTest#testLowerCaseWithDashes
+com.google.gson.functional.FieldNamingTest#testLowerCaseWithUnderscores
+com.google.gson.functional.FieldNamingTest#testUpperCamelCaseWithSpaces
+com.google.gson.functional.FieldNamingTest#testIdentity
+com.google.gson.functional.FieldNamingTest#testUpperCaseWithUnderscores
