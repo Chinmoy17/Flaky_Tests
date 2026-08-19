@@ -1,0 +1,30 @@
+# ─── Secrets / environment ───────────────────────────────
+.env
+*.env
+!.env.example
+*.key
+*.pem
+secrets/
+
+# ─── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ─── Java / Maven ────────────────────────────────────────
+target/
+*.class
+
+# ─── Flaky-test tool raw output (commit curated results instead) ──
+.nondex/
+**/.nondex/
+
+# ─── OS / editor cruft ───────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+*.log
