@@ -28,3 +28,6 @@ Thumbs.db
 .idea/
 *.iml
 *.log
+
+# ─── Personal local notes (never committed) ──────────────
+notes-local/
