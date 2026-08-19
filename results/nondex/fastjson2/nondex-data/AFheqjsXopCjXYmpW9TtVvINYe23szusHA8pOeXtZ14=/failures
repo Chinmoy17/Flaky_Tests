@@ -1,0 +1,6 @@
+com.alibaba.fastjson2.issues.Issue507#test
+com.alibaba.fastjson2.issues.Issue507#test1
+com.alibaba.fastjson2.writer.ObjectWriterSetTest#testJsonbSet
+com.alibaba.fastjson2.features.MapSortFieldTest#test
+com.alibaba.fastjson2.issues.Issue586#test
+com.alibaba.fastjson2.issues_1000.Issue1494#test

@@ -1,0 +1,2 @@
+# Keep shell scripts LF so they run inside Linux containers regardless of host checkout.
+*.sh text eol=lf

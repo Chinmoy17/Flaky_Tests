@@ -8,29 +8,35 @@ in Docker (no local Java toolchain required). Companion reading notes for the th
 
 | Tool | Purpose | Status | Findings |
 |------|---------|--------|----------|
-| **NonDex** | Detect *implementation-dependent* (ID) flaky tests via legal shuffling of under-determined Java APIs | ✅ Done | [results/nondex/gson/findings.md](results/nondex/gson/findings.md) |
+| **NonDex** | Detect *implementation-dependent* (ID) flaky tests via legal shuffling of under-determined Java APIs | ✅ Done | [gson](results/nondex/gson/findings.md) · [fastjson2](results/nondex/fastjson2/findings.md) |
 | **iDFlakies** | Detect & classify *order-dependent* (OD) vs *non-order-dependent* (NOD) flaky tests via random test-orders | ⏳ Next | — |
 | **RankF artifact** | Rank OD-relevant tests (read paper + run lightweight `RankF_O`) | ⏳ Planned | — |
 
 ## Highlight so far
-Ran **NonDex 2.2.1** on **`google/gson`** (`e685705b`) inside `maven:3.9-eclipse-temurin-11` and
-reproduced **12 known ID flaky tests** — all catalogued in IDoFT. Details and root-cause analysis:
-[results/nondex/gson/findings.md](results/nondex/gson/findings.md).
+Ran **NonDex 2.2.1** (in Docker, JDK 11) on two IDoFT projects and reproduced **18 catalogued ID
+flaky tests** in total:
+- **`google/gson`** (`e685705b`) — 12 tests → [findings](results/nondex/gson/findings.md)
+- **`alibaba/fastjson2`** (`450d9fe5`) — 6 tests → [findings](results/nondex/fastjson2/findings.md)
+
+All fail only when NonDex legally permutes `HashMap`/`HashSet` iteration and reflection field order.
+
+## Reproduce (Docker Compose — one command)
+From the repo root:
+```
+docker compose --profile gson      up   # google/gson       -> 12 ID tests
+docker compose --profile fastjson2 up   # alibaba/fastjson2 ->  6 ID tests
+```
+Results land in `results/nondex/<project>/`. A non-zero exit is **expected** — that is how NonDex
+signals it found flaky tests. See [docker/nondex/README.md](docker/nondex/README.md) for the plain
+`docker build` / `docker run` equivalents and how to add new targets.
+
+> NonDex 2.2.1 needs **JDK 9+** (JDK 8 fails with `Unrecognized option: --add-exports`), which is why
+> the image is JDK 11.
 
 ## Repository layout
 ```
 Papers/                 paper PDFs + Paper-Notes.md (RankF-focused notes)
-results/
-  nondex/gson/          NonDex run: findings.md + raw .nondex output + console log
-.gitignore
+docker/nondex/          Dockerfile + run-nondex.sh (the reproducible runner)
+docker-compose.yml      one-command targets (profiles: gson, fastjson2)
+results/nondex/         NonDex findings per project (findings.md + raw .nondex data + log)
 ```
-
-## Reproducing a NonDex run (summary)
-```bash
-docker run -dit --name nondex-run -w /work maven:3.9-eclipse-temurin-11 bash
-docker exec nondex-run bash -lc "cd /work && git clone https://github.com/google/gson.git && \
-  cd gson && git checkout e685705b2bf3ae174958612a185bd231c0e0c5d9 && \
-  mvn -pl gson -DfailIfNoTests=false -Dtest=MapTest,FieldNamingTest,CollectionTest \
-      edu.illinois:nondex-maven-plugin:2.2.1:nondex"
-```
-> NonDex 2.2.1 needs **JDK 9+** (JDK 8 fails with `Unrecognized option: --add-exports`).

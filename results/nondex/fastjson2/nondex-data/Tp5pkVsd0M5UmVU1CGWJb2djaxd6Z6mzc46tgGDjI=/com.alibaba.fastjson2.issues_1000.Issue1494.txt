@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: com.alibaba.fastjson2.issues_1000.Issue1494
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.006 s <<< FAILURE! -- in com.alibaba.fastjson2.issues_1000.Issue1494
+com.alibaba.fastjson2.issues_1000.Issue1494.test -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <{"qos":0,"tag":"TAG1.cpu","time":1684394501624,"value":37400}> but was: <{"value":37400,"qos":0,"time":1684394501624,"tag":"TAG1.cpu"}>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.alibaba.fastjson2.issues_1000.Issue1494.test(Issue1494.java:27)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+

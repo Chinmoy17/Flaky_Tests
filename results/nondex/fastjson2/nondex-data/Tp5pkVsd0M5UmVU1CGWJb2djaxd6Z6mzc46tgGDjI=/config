@@ -1,0 +1,11 @@
+nondexFilter=.*
+nondexMode=FULL
+nondexSeed=974622
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/work/fastjson2/core/.nondex
+nondexJarDir=/work/fastjson2/core/.nondex
+nondexExecid=Tp5pkVsd0M5UmVU1CGWJb2djaxd6Z6mzc46tgGDjI=
+nondexLogging=CONFIG
+test=

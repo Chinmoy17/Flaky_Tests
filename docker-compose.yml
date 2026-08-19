@@ -1,0 +1,38 @@
+# Run NonDex targets reproducibly via Docker Compose, straight from the VS Code terminal.
+#
+#   docker compose --profile gson      up   # reproduce the google/gson finding
+#   docker compose --profile fastjson2 up   # run the alibaba/fastjson2 target
+#
+# Each target is a profile so they run one at a time (safe shared Maven cache).
+# Results are written to ./results/nondex/<project>/. A non-zero exit is EXPECTED
+# when NonDex finds flaky tests.
+name: flaky-nondex
+
+x-nondex-common: &nondex-common
+  build: ./docker/nondex
+  image: flaky-nondex
+  volumes:
+    - ./results/nondex:/out          # findings land here
+    - m2cache:/root/.m2              # cache Maven downloads across runs
+
+services:
+  gson:
+    <<: *nondex-common
+    profiles: ["gson"]
+    command:
+      - "https://github.com/google/gson.git"
+      - "e685705b2bf3ae174958612a185bd231c0e0c5d9"
+      - "gson"
+      - "MapTest,FieldNamingTest,CollectionTest"
+
+  fastjson2:
+    <<: *nondex-common
+    profiles: ["fastjson2"]
+    command:
+      - "https://github.com/alibaba/fastjson2.git"
+      - "450d9fe5a39f9f911f06882a302a585b93a586fa"
+      - "core"
+      - "MapSortFieldTest,ObjectWriterSetTest,Issue507,Issue586,Issue1494"
+
+volumes:
+  m2cache:

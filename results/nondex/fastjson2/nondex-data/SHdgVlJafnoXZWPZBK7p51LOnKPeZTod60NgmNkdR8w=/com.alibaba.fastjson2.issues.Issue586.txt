@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: com.alibaba.fastjson2.issues.Issue586
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.031 s <<< FAILURE! -- in com.alibaba.fastjson2.issues.Issue586
+com.alibaba.fastjson2.issues.Issue586.test -- Time elapsed: 0.028 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <[1,100,1000,1001,1002,1003,1004,1005,1006]> but was: <[1003,1005,100,1004,1000,1,1006,1001,1002]>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.alibaba.fastjson2.issues.Issue586.test(Issue586.java:15)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
