@@ -1,15 +1,12 @@
 # Flaky_Tests — the story so far
 
-## How this started
+# Flaky_Tests — the story so far
 
-I cold-emailed Prof. Shanto Rahman about research opportunities. She replied with homework: read at
-least one of her papers — **FlakeSync**, **RankF**, or **TSVD4J** — try the corresponding artifact,
-and separately try three background tools — **IDoFT**, **iDFlakies**, and **NonDex** — then report
-back what I found and which research direction excited me. My notes on all three papers (with a deep
-dive on **RankF**, the one I picked) are in [`Papers/Paper-Notes.md`](Papers/Paper-Notes.md).
+Hands-on work on **NonDex**, **iDFlakies**, and **RankF** — the tools and paper I found most
+interesting — run reproducibly in Docker/Python, no local Java install needed. Reading notes on all
+three papers, with a deep dive on **RankF**, are in [`Papers/Paper-Notes.md`](Papers/Paper-Notes.md).
 
-This repo is the hands-on part of that homework — everything reproducible in Docker/Python, no local
-Java install needed. Here's what happened, in order.
+Here's what happened, chapter by chapter.
 
 ## Chapter 1 — NonDex: tests that lie because Java never promised an order
 
