@@ -6,7 +6,8 @@ Hands-on work on **NonDex**, **iDFlakies**, and **RankF** — the tools and pape
 interesting — run reproducibly in Docker/Python, no local Java install needed. Reading notes on all
 three papers, with a deep dive on **RankF**, are in [`Papers/Paper-Notes.md`](Papers/Paper-Notes.md).
 
-Here's what happened, chapter by chapter.
+For a structured what/why/how report with consolidated results tables, see
+**[FINDINGS.md](FINDINGS.md)**. The chapters below tell the same story narratively.
 
 ## Chapter 1 — NonDex: tests that lie because Java never promised an order
 
