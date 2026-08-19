@@ -37,3 +37,18 @@ docker run --rm -v "${PWD}\results\idflakies:/out" flaky-idflakies `
 - Same Windows-paths-with-spaces note as the NonDex runner: quote the whole `-v` value.
 - Add `-v flaky-m2:/root/.m2` to cache Maven downloads across runs (same cache used by the NonDex
   image if you reuse the volume name).
+
+## `run-idflakies-minimize.sh` (currently blocked upstream)
+This repo also has a script + compose service (`http-request-minimize`) meant to localize the exact
+polluter/state-setter per OD test via `idflakies:minimize` (bundled iFixFlakies), reusing an existing
+`detect()` run's `.dtfixingtools` data (mounted read-only at `/seed`) instead of rerunning detection.
+
+**It currently fails**: `edu.illinois.cs:idflakies-maven-plugin:2.0.0` — the only version ever
+published to Maven Central (2022-07-12) — doesn't include the `minimize`/`fix` goals; those were
+added to the GitHub repo later and never released. Using them requires building iDFlakies from source
+(`git clone` the tool itself, `mvn install` a local `2.0.1-SNAPSHOT`) and pointing `IDFVER` in the
+script at that version instead. We did not pursue this (see
+[results/idflakies/http-request/findings.md](../../results/idflakies/http-request/findings.md) for
+the full writeup) and used **RankF_O** for localization instead
+([rankf/README.md](../../rankf/README.md)).
+

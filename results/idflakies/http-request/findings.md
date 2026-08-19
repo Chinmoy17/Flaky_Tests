@@ -80,6 +80,26 @@ one test can set up or mutate, and a later test then implicitly depends on that 
 classic root cause named in the RankF paper: a **state-setter** enabling a **brittle** test to pass,
 or a **polluter** breaking a **victim** test that follows it.
 
+**Confirmed in Phase 3:** applying RankF_O to this data pinpointed `customConnectionFactory` as the
+top suspect for 11 of the 28 tests, and manual source inspection confirmed it mutates a **static**
+field (`HttpRequest.setConnectionFactory(...)`) shared by every other test. See
+[results/rankf/http-request/findings.md](../../rankf/http-request/findings.md).
+
+## Bonus attempt: localizing the culprit with `idflakies:minimize` (blocked)
+We tried going one step further than detection: `idflakies:minimize` (bundled iFixFlakies) searches,
+per OD test, for the specific polluter/state-setter via delta-debugging. It **failed immediately**:
+```
+Could not find goal 'minimize' in plugin edu.illinois.cs:idflakies-maven-plugin:2.0.0
+among available goals bulk, detect, help, replay, testTime
+```
+We confirmed via Maven Central that **`2.0.0` (2022-07-12) is the only version ever published** —
+the `minimize`/`fix` goals were added to the GitHub repo later and were never released, so using them
+requires building iDFlakies from source. We deliberately did not pursue that (a materially bigger,
+riskier detour building a *second* tool from source) and instead used **RankF_O** for localization —
+see [results/rankf/http-request/findings.md](../../rankf/http-request/findings.md). The attempt log is
+kept for transparency: `idflakies-minimize-http-request.log`. The (currently blocked) runner script is
+at [docker/idflakies/run-idflakies-minimize.sh](../../../docker/idflakies/run-idflakies-minimize.sh).
+
 ## Repro gotcha (worth remembering)
 The project's `lib/pom.xml` hardcodes an obsolete compiler level:
 ```xml

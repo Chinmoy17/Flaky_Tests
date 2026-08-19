@@ -28,6 +28,8 @@ Thumbs.db
 .idea/
 *.iml
 *.log
+# ...except the tool-run console logs we deliberately keep as evidence.
+!results/**/*.log
 
 # ─── Personal local notes (never committed) ──────────────
 notes-local/

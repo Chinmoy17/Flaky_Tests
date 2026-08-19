@@ -52,5 +52,23 @@ services:
       - "10"
       - "random-class-method"
 
+  # Mini "localize the culprit" run: reuses the detect() results above (mounted
+  # read-only from results/idflakies/http-request/dtfixingtools) and runs
+  # idflakies:minimize on just 2 chosen OD tests instead of all 28.
+  http-request-minimize:
+    build: ./docker/idflakies
+    image: flaky-idflakies
+    profiles: ["http-request-minimize"]
+    entrypoint: ["run-idflakies-minimize"]
+    volumes:
+      - ./results/idflakies/http-request/dtfixingtools:/seed:ro
+      - ./results/idflakies:/out
+      - m2cache:/root/.m2
+    command:
+      - "https://github.com/kevinsawicki/http-request.git"
+      - "2d62a3e9da726942a93cf16b6e91c0187e6c0136"
+      - "lib"
+      - "com.github.kevinsawicki.http.HttpRequestTest.basicProxyAuthentication,com.github.kevinsawicki.http.HttpRequestTest.singleVerifier"
+
 volumes:
   m2cache:
